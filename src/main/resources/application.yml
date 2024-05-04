@@ -1,13 +1,13 @@
 # 项目相关配置
 ruoyi:
   # 名称
-  name: RuoYi
+  name: Tianyu
   # 版本
-  version: 3.8.7
+  version: 1.0.0
   # 版权年份
   copyrightYear: 2024
   # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: D:/ruoyi/uploadPath
+  profile: E:\java\offer_in\RuoYi-Vue-fast\uploadPath
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数字计算 char 字符验证
@@ -74,9 +74,9 @@ spring:
     # 数据库索引
     database: 0
     # 密码
-    password:
+    password: 123
     # 连接超时时间
-    timeout: 10s
+    timeout: 100s
     lettuce:
       pool:
         # 连接池中的最小空闲连接
@@ -131,7 +131,7 @@ xss:
 # 代码生成
 gen:
   # 作者
-  author: ruoyi
+  author: tianyu
   # 默认生成包路径 system 需改成自己的模块名称 如 system monitor tool
   packageName: com.ruoyi.project.system
   # 自动去除表前缀，默认是true

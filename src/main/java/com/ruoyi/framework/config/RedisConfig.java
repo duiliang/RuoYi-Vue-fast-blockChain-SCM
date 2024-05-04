@@ -22,9 +22,11 @@ public class RedisConfig extends CachingConfigurerSupport
     @SuppressWarnings(value = { "unchecked", "rawtypes" })
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory connectionFactory)
     {
+        // 设置序列化
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
+        // 配置连接工厂
         template.setConnectionFactory(connectionFactory);
-
+        // 使用
         FastJson2JsonRedisSerializer serializer = new FastJson2JsonRedisSerializer(Object.class);
 
         // 使用StringRedisSerializer来序列化和反序列化redis的key值

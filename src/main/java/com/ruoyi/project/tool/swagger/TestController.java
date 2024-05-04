@@ -32,12 +32,14 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/test/user")
 public class TestController extends BaseController
 {
+    // 模拟数据库
     private final static Map<Integer, UserEntity> users = new LinkedHashMap<Integer, UserEntity>();
     {
         users.put(1, new UserEntity(1, "admin", "admin123", "15888888888"));
         users.put(2, new UserEntity(2, "ry", "admin123", "15666666666"));
     }
 
+    // 查询用户列表
     @ApiOperation("获取用户列表")
     @GetMapping("/list")
     public R<List<UserEntity>> userList()
